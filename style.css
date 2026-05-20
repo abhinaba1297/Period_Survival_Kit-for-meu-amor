@@ -206,10 +206,18 @@ footer{
   gap:10px;
 }
 
+.photoGrid{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+  gap:12px;
+}
+
 .photoGrid img{
   width:100%;
-  height:150px;
+  height:220px;
   object-fit:cover;
+  object-position:center;
   border-radius:18px;
   box-shadow:0 10px 22px rgba(80,45,20,.14);
 }
