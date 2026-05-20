@@ -72,7 +72,7 @@ const emergencyMessages = [
   "I wish I could hold you right now.",
   "Your cramps are rude, but you are perfect.",
   "Sending one emergency forehead kiss.",
-  "Clara protection mode: activated.",
+  "Babe protection mode: activated.",
   "You are doing better than you think, amor."
 ];
 
@@ -132,7 +132,7 @@ function render(){
   const q = QUESTIONS[idx];
   updateComfort(Math.round(((idx + 1) / QUESTIONS.length) * 88));
 
-  titleEl.textContent = "Emergency Clara Recovery System™";
+  titleEl.textContent = "Emergency Babe Recovery System™";
   subtitleEl.textContent = "Deploying warmth, jokes, emotional support, and scientifically questionable boyfriend medicine.";
 
   questionEl.textContent = q.text;
@@ -149,7 +149,7 @@ function render(){
 
 function renderLoading(){
   updateComfort(12);
-  titleEl.textContent = "Analyzing Clara...";
+  titleEl.textContent = "Analyzing Babe...";
   subtitleEl.textContent = "Running emergency comfort diagnostics.";
 
   questionEl.innerHTML = `
@@ -196,7 +196,7 @@ function restart(){
 function showFinal(){
   updateComfort(100);
 
-  titleEl.textContent = "Maximum Clara Protection Activated 🤎";
+  titleEl.textContent = "Maximum Babe Protection Activated 🤎";
   subtitleEl.textContent = "Final treatment: love, rest, warmth, and me bothering you forever.";
 
   const photoHTML = photos
