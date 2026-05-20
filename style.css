@@ -1,0 +1,229 @@
+:root{
+  --bg1:#2b1d16;
+  --bg2:#4a3124;
+  --card:#fff8ef;
+  --cream:#fff3df;
+  --brown:#3a2418;
+  --muted:#8a6f5d;
+  --accent:#b7794c;
+  --accent2:#e7b98a;
+  --soft:#f7dfc4;
+  --shadow:0 24px 60px rgba(0,0,0,.25);
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family: ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color:var(--brown);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(231,185,138,.22), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(255,230,200,.14), transparent 30%),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
+  display:grid;
+  place-items:center;
+  padding:22px;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"☕ 🤎 ✨ 🧸 🌙";
+  position:fixed;
+  inset:auto 0 20px 0;
+  text-align:center;
+  opacity:.18;
+  font-size:28px;
+  letter-spacing:20px;
+  pointer-events:none;
+}
+
+.card{
+  width:min(760px, 96vw);
+  background:rgba(255,248,239,.94);
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:28px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+header{
+  padding:28px 28px 16px;
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 12px;
+  border-radius:999px;
+  background:var(--soft);
+  color:#6f4328;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+h1{
+  margin:0 0 10px;
+  font-size:clamp(28px, 4vw, 42px);
+  line-height:1.05;
+}
+
+#subtitle{
+  margin:0;
+  color:var(--muted);
+  line-height:1.45;
+  font-size:16px;
+}
+
+.meterWrap{
+  margin-top:18px;
+}
+
+.meterTop{
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  color:#7a5a43;
+  margin-bottom:6px;
+}
+
+.meter{
+  height:12px;
+  background:#ecd4ba;
+  border-radius:999px;
+  overflow:hidden;
+}
+
+#comfortBar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius:999px;
+  transition:width .45s ease;
+}
+
+.stage{
+  padding:18px 28px 16px;
+}
+
+.question{
+  background:#fffaf2;
+  border:1px solid #ead1b7;
+  border-radius:20px;
+  padding:20px;
+  font-size:clamp(19px, 2.5vw, 24px);
+  line-height:1.35;
+  box-shadow:0 10px 22px rgba(80,45,20,.08);
+}
+
+.choices{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:16px;
+}
+
+.choice{
+  border:0;
+  border-radius:16px;
+  padding:14px 17px;
+  cursor:pointer;
+  font-size:16px;
+  color:#3a2418;
+  background:#fffaf2;
+  border:1px solid #e8cfb6;
+  box-shadow:0 8px 18px rgba(80,45,20,.10);
+  transition:.15s ease;
+}
+
+.choice:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(80,45,20,.16);
+}
+
+.choice.primary{
+  color:white;
+  background:linear-gradient(90deg, var(--accent), #d89a66);
+  border:0;
+}
+
+.hint{
+  min-height:24px;
+  margin:14px 2px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+footer{
+  display:flex;
+  justify-content:space-between;
+  padding:16px 20px 20px;
+  border-top:1px solid #ead1b7;
+}
+
+.ghost{
+  border:1px solid #dfc2a2;
+  background:#fffaf2;
+  color:#5c3925;
+  padding:10px 13px;
+  border-radius:14px;
+  cursor:pointer;
+}
+
+.ghost:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+.emergency{
+  position:fixed;
+  right:18px;
+  top:18px;
+  z-index:10;
+  border:0;
+  border-radius:999px;
+  padding:11px 15px;
+  background:#fff3df;
+  color:#5c3925;
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+  cursor:pointer;
+}
+
+.finalMessage{
+  margin-top:16px;
+  padding:20px;
+  background:#fffaf2;
+  border:1px dashed #c58b5a;
+  border-radius:20px;
+  line-height:1.6;
+  white-space:pre-wrap;
+}
+
+.photoGrid{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));
+  gap:10px;
+}
+
+.photoGrid img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 10px 22px rgba(80,45,20,.14);
+}
+
+.loadingLine{
+  padding:10px 0;
+  font-size:17px;
+}
+
+@media(max-width:520px){
+  .choices{ flex-direction:column; }
+  .choice{ width:100%; }
+  .emergency{
+    position:static;
+    margin-bottom:12px;
+  }
+}

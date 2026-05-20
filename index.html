@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Period Survival Kit for Meu Amor 🤎</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="emergencyBtn" class="emergency">Instant love 🤎</button>
+
+  <main class="card">
+    <header>
+      <div class="badge">Period Survival Kit for Meu Amor</div>
+      <h1 id="title">A tiny comfort corner for Clara 🤎</h1>
+      <p id="subtitle">
+        I know you’re not feeling your best right now, so I made you a tiny space on the internet that exists only to make you smile.
+      </p>
+
+      <div class="meterWrap">
+        <div class="meterTop">
+          <span>Comfort level</span>
+          <span id="comfortText">0%</span>
+        </div>
+        <div class="meter">
+          <div id="comfortBar"></div>
+        </div>
+      </div>
+    </header>
+
+    <section id="stage" class="stage">
+      <div id="question" class="question"></div>
+      <div id="choices" class="choices"></div>
+      <p id="hint" class="hint"></p>
+    </section>
+
+    <footer>
+      <button id="backBtn" class="ghost">← Back</button>
+      <button id="restartBtn" class="ghost">Restart ↻</button>
+    </footer>
+  </main>
+
+  <audio id="bgMusic" preload="auto" loop playsinline>
+    <source src="./song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
